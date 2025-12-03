@@ -7,12 +7,6 @@ pipeline {
 
     stages {
 
-        stage('Git Checkout') {
-            steps {
-                git 'https://github.com/Sodhu1008/devops-ci-cd-local.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t $IMAGE_NAME .'
